@@ -35,50 +35,53 @@ const heroStates = [
 const flagship = [
   {
     index: '01',
-    name: 'DevTrack',
-    domain: 'Public infrastructure',
-    period: '2024 — now',
-    headline: 'Making public infrastructure visible enough to act on.',
+    name: 'DEVTRACK',
+    domain: 'Public systems',
+    accent: '#164f9f',
+    headline: 'Making government work visible enough for people to enter it.',
     description:
-      'A shared intelligence and workflow layer for public infrastructure. I led the product, mapped fragmented government processes and built a working platform for projects, budgets and bottlenecks.',
-    role: 'Founder · product manager',
-    place: 'Kathmandu, Nepal',
-    status: 'Built · institutional conversations',
-    image: '/img/projects/devtrack-1.png',
-    alt: 'DevTrack infrastructure project dashboard',
+      'I worked across public offices, project workflows and citizen needs to prototype a clearer connection between institutions and the people they serve.',
+    role: 'Founder & product',
+    mainImage: '/img/projects/devtrack-2.png',
+    mainAlt: 'The DevTrack team gathered around a table in Kathmandu',
+    details: [
+      { image: '/img/projects/devtrack-1.png', alt: 'DevTrack public infrastructure overview and map', caption: 'The working product / public overview' },
+    ],
     href: 'https://devtrack.org',
-    link: 'Open DevTrack',
-    lead: true,
+    link: 'View documentation',
   },
   {
     index: '02',
-    name: 'From the Branches',
+    name: 'FROM THE\nBRANCHES',
     domain: 'Social enterprise',
-    period: '2023 — 2024',
-    headline: 'The routes already existed. The opportunity did not.',
+    accent: '#cf4d2b',
+    headline: 'Poverty is not one problem. I started with the routes underneath it.',
     description:
-      'An eight-week field pilot that explored waste-collection routes as last-mile delivery routes, combining new income opportunities with banking access and practical financial learning.',
-    role: 'Founder · field lead',
-    place: 'Kathmandu, Nepal',
-    status: 'Completed pilot · Davis Projects for Peace',
-    image: '/img/projects/from-the-branches-waste-routes.png',
-    alt: 'Fieldwork for From the Branches in Kathmandu',
+      'Informal waste collectors already moved through the city every day. We tested whether those routes could create new income, financial access and greater agency.',
+    role: 'Founder / Davis Projects for Peace',
+    mainImage: '/img/projects/from-the-branches-waste-routes.png',
+    mainAlt: 'From the Branches fieldwork with waste collectors in Kathmandu',
+    details: [
+      { image: '/img/projects/branches-1.svg', alt: 'From the Branches route-system study', caption: 'The route system / field model' },
+      { image: '/img/artifact/fieldwork.webp', alt: 'Illustrated field conversation in Kathmandu', caption: 'Listening inside the system' },
+    ],
     href: '/reports/from-the-branches-report-2026.pdf',
-    link: 'Read the field report',
+    link: 'View documentation',
   },
   {
     index: '03',
-    name: 'Resha',
-    domain: 'Heritage product',
-    period: '2025 — now',
-    headline: 'Inherited patterns, carried forward.',
+    name: 'STITCH /\nRESHA',
+    domain: 'Heritage & product',
+    accent: '#9e2939',
+    headline: 'Turning inherited patterns into something people can carry forward.',
     description:
-      'A contemporary bag line shaped through cultural research, user conversations and three product worlds—Himal, Pahaad and Terai—rooted in Nepal’s regions and visual traditions.',
-    role: 'Co-founder · product',
-    place: 'Nepal',
-    status: 'Collections developed · brand in progress',
-    image: '/img/stitch/stitch-collections.png',
-    alt: 'Resha Himal, Pahaad and Terai collection concepts',
+      'Cultural research, product strategy and contemporary form came together in a luxury bag shaped by Nepal’s regions, motifs and material memory.',
+    role: 'Co-founder / product',
+    mainImage: '/img/stitch/stitch-collections.png',
+    mainAlt: 'The Resha Himal, Pahaad and Terai bag collections',
+    details: [
+      { image: '/img/stitch/stitch-1.svg', alt: 'Resha material, beadwork and motif detail', caption: 'Material & motif study', detail: true },
+    ],
     link: 'Project page coming',
   },
 ];
@@ -286,41 +289,39 @@ function ProfileBridge() {
 function SelectedWork() {
   return (
     <section className="work" id="work" aria-labelledby="work-title">
-      <header className="section-head" data-reveal>
+      <header className="work-heading" data-reveal>
         <p>Selected work</p>
-        <h2 id="work-title">Dreams brought<br />to reality.</h2>
-        <span>(03)</span>
+        <h2 id="work-title">Three ways of entering the world.</h2>
       </header>
-      <div className="project-grid">
+      <div className="project-ledger">
         {flagship.map((project) => (
-          <article className={`project-card${project.lead ? ' project-card--lead' : ''}`} key={project.name} data-reveal>
-            {project.href ? <a className="project-card__image" href={project.href} target={project.href.startsWith('http') ? '_blank' : undefined} rel="noreferrer">
-              <figure>
-                <img src={project.image} alt={project.alt} />
-                <span>{project.name} / documentary material</span>
+          <article className="project-case" key={project.index} style={{ '--project-accent': project.accent }} data-reveal>
+            <aside className="project-case__rail" aria-hidden="true">
+              <span>{project.index}</span><i />
+            </aside>
+            <div className="project-case__visuals">
+              <figure className="project-case__main">
+                <img src={project.mainImage} alt={project.mainAlt} />
+                <figcaption><b>Fig. 1</b> {project.domain} / Kathmandu</figcaption>
               </figure>
-            </a> : <div className="project-card__image"><figure><img src={project.image} alt={project.alt} /><span>{project.name} / documentary material</span></figure></div>}
-            {project.lead ? (
-              <div className="project-card__lead-info">
-                <span>{project.index} / {project.domain}<i>{project.period}</i></span>
-                <div><h3>{project.name}</h3><p>{project.headline}</p></div>
-                <a href={project.href} target="_blank" rel="noreferrer">{project.link}<Arrow /></a>
+              <div className={`project-case__details${project.details.length === 1 ? ' project-case__details--single' : ''}`}>
+                {project.details.map((detail, index) => (
+                  <figure className={detail.detail ? 'is-detail' : ''} key={detail.image}>
+                    <img src={detail.image} alt={detail.alt} />
+                    <figcaption><b>Fig. {index + 2}</b> {detail.caption}</figcaption>
+                  </figure>
+                ))}
               </div>
-            ) : (
-              <>
-                <div className="project-card__topline"><span>{project.index} / {project.domain}</span><span>{project.period}</span></div>
-                <div className="project-card__copy">
-                  <div><h3>{project.name}</h3><p className="project-card__headline">{project.headline}</p></div>
-                  <p className="project-card__description">{project.description}</p>
-                </div>
-                <div className="project-card__facts">
-                  <span><i>Role</i><b>{project.role}</b></span>
-                  <span><i>Place</i><b>{project.place}</b></span>
-                  <span><i>Status</i><b>{project.status}</b></span>
-                  {project.href ? <a href={project.href} target={project.href.startsWith('http') ? '_blank' : undefined} rel="noreferrer">{project.link}<Arrow /></a> : <em>{project.link}</em>}
-                </div>
-              </>
-            )}
+            </div>
+            <div className="project-case__story">
+              <p className="project-case__meta">{project.index} / {project.domain}</p>
+              <h3>{project.name.split('\n').map((line) => <React.Fragment key={line}>{line}<br /></React.Fragment>)}</h3>
+              <i className="project-case__rule" aria-hidden="true" />
+              <p className="project-case__headline">{project.headline}</p>
+              <p className="project-case__description">{project.description}</p>
+              <p className="project-case__role">{project.role}</p>
+              {project.href ? <a href={project.href} target={project.href.startsWith('http') ? '_blank' : undefined} rel="noreferrer">{project.link} <Arrow /></a> : <span className="project-case__pending">{project.link}</span>}
+            </div>
           </article>
         ))}
       </div>
