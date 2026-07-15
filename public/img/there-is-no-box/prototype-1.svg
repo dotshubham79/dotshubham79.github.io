@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <rect width="800" height="600" fill="#FBFAF6"/>
+  <!-- Ruled paper -->
+  <line x1="60" y1="0" x2="60" y2="600" stroke="#C8102E" stroke-width="1.5" opacity="0.3"/>
+  <line x1="0" y1="60" x2="800" y2="60" stroke="#D8D4C8" stroke-width="1"/>
+  <line x1="0" y1="120" x2="800" y2="120" stroke="#D8D4C8" stroke-width="1"/>
+  <line x1="0" y1="180" x2="800" y2="180" stroke="#D8D4C8" stroke-width="1"/>
+  <line x1="0" y1="240" x2="800" y2="240" stroke="#D8D4C8" stroke-width="1"/>
+  <line x1="0" y1="300" x2="800" y2="300" stroke="#D8D4C8" stroke-width="1"/>
+  <line x1="0" y1="360" x2="800" y2="360" stroke="#D8D4C8" stroke-width="1"/>
+  <line x1="0" y1="420" x2="800" y2="420" stroke="#D8D4C8" stroke-width="1"/>
+  <line x1="0" y1="480" x2="800" y2="480" stroke="#D8D4C8" stroke-width="1"/>
+  <line x1="0" y1="540" x2="800" y2="540" stroke="#D8D4C8" stroke-width="1"/>
+  <!-- Node network: contradiction engine UI -->
+  <!-- Central question node -->
+  <ellipse cx="400" cy="280" rx="70" ry="40" fill="#161513"/>
+  <text x="400" y="274" font-family="monospace" font-size="10" fill="#FBFAF6" text-anchor="middle">ASSUMPTION</text>
+  <text x="400" y="290" font-family="monospace" font-size="10" fill="#C8102E" text-anchor="middle">"the box is real"</text>
+  <!-- Connecting lines to satellite nodes -->
+  <line x1="330" y1="260" x2="200" y2="180" stroke="#C8102E" stroke-width="1.5" stroke-dasharray="6,3"/>
+  <line x1="330" y1="295" x2="190" y2="360" stroke="#161513" stroke-width="1" stroke-dasharray="6,3" opacity="0.4"/>
+  <line x1="470" y1="260" x2="600" y2="170" stroke="#C8102E" stroke-width="1.5" stroke-dasharray="6,3"/>
+  <line x1="470" y1="295" x2="610" y2="370" stroke="#161513" stroke-width="1" stroke-dasharray="6,3" opacity="0.4"/>
+  <line x1="400" y1="240" x2="400" y2="120" stroke="#E89B2C" stroke-width="1.5" stroke-dasharray="6,3"/>
+  <line x1="400" y1="320" x2="400" y2="440" stroke="#161513" stroke-width="1" stroke-dasharray="6,3" opacity="0.4"/>
+  <!-- Satellite nodes -->
+  <!-- Top: Frame challenge -->
+  <ellipse cx="400" cy="100" rx="60" ry="30" fill="#fff" stroke="#C8102E" stroke-width="1.5"/>
+  <text x="400" y="96" font-family="monospace" font-size="9" fill="#161513" text-anchor="middle">FRAME</text>
+  <text x="400" y="109" font-family="monospace" font-size="9" fill="#C8102E" text-anchor="middle">CHALLENGE</text>
+  <!-- Top-left: Perspective A -->
+  <ellipse cx="185" cy="165" rx="55" ry="28" fill="#fff" stroke="#161513" stroke-width="1"/>
+  <text x="185" y="161" font-family="monospace" font-size="9" fill="#8B867B" text-anchor="middle">PERSPECTIVE</text>
+  <text x="185" y="174" font-family="monospace" font-size="9" fill="#161513" text-anchor="middle">A: human</text>
+  <!-- Top-right: Perspective B -->
+  <ellipse cx="615" cy="155" rx="55" ry="28" fill="#fff" stroke="#161513" stroke-width="1"/>
+  <text x="615" y="151" font-family="monospace" font-size="9" fill="#8B867B" text-anchor="middle">PERSPECTIVE</text>
+  <text x="615" y="164" font-family="monospace" font-size="9" fill="#161513" text-anchor="middle">B: machine</text>
+  <!-- Bottom-left: Contradiction -->
+  <ellipse cx="175" cy="365" rx="58" ry="30" fill="#161513"/>
+  <text x="175" y="361" font-family="monospace" font-size="9" fill="#FBFAF6" text-anchor="middle">PRODUCTIVE</text>
+  <text x="175" y="374" font-family="monospace" font-size="9" fill="#C8102E" text-anchor="middle">CONTRADICTION</text>
+  <!-- Bottom-right: New frame -->
+  <ellipse cx="620" cy="375" rx="58" ry="30" fill="#161513"/>
+  <text x="620" y="371" font-family="monospace" font-size="9" fill="#FBFAF6" text-anchor="middle">NEW</text>
+  <text x="620" y="384" font-family="monospace" font-size="9" fill="#E89B2C" text-anchor="middle">FRAME EMERGES</text>
+  <!-- Bottom: Output -->
+  <ellipse cx="400" cy="455" rx="65" ry="32" fill="#C8102E"/>
+  <text x="400" y="451" font-family="monospace" font-size="9" fill="#FBFAF6" text-anchor="middle">THERE IS</text>
+  <text x="400" y="464" font-family="monospace" font-size="9" fill="#FBFAF6" text-anchor="middle">NO BOX</text>
+  <!-- UI chrome: browser/app frame suggestion -->
+  <rect x="0" y="0" width="800" height="52" fill="#161513"/>
+  <text x="30" y="24" font-family="Georgia,serif" font-size="17" font-weight="bold" fill="#FBFAF6">There Is No Box</text>
+  <text x="240" y="24" font-family="monospace" font-size="10" fill="#E89B2C">contradiction engine · prototype</text>
+  <text x="30" y="43" font-family="monospace" font-size="10" fill="#8B867B">in build · thereisnobox.xyz</text>
+  <text x="680" y="34" font-family="monospace" font-size="10" fill="#C8102E">WET INK</text>
+  <!-- Annotation: "think outside the box assumes the box is real" -->
+  <rect x="200" y="490" width="400" height="44" rx="3" fill="#fff" stroke="#D8D4C8" stroke-width="1"/>
+  <text x="400" y="508" font-family="Georgia,serif" font-size="13" fill="#161513" text-anchor="middle">"Think outside the box"</text>
+  <text x="400" y="525" font-family="Georgia,serif" font-size="13" fill="#C8102E" text-anchor="middle">assumes the box is real.</text>
+  <!-- Caption -->
+  <rect x="0" y="560" width="800" height="40" fill="#161513"/>
+  <text x="30" y="585" font-family="monospace" font-size="12" fill="#8B867B">PHOTO — prototype screen / contradiction engine · prototype: contradiction as input</text>
+</svg>

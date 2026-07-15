@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <rect width="800" height="600" fill="#0F0D0B"/>
+  <g fill="none" stroke="#2E2A25" stroke-width="1.5">
+    <rect x="20" y="12" width="28" height="18" rx="2"/><rect x="72" y="12" width="28" height="18" rx="2"/>
+    <rect x="124" y="12" width="28" height="18" rx="2"/><rect x="176" y="12" width="28" height="18" rx="2"/>
+    <rect x="228" y="12" width="28" height="18" rx="2"/><rect x="280" y="12" width="28" height="18" rx="2"/>
+    <rect x="332" y="12" width="28" height="18" rx="2"/><rect x="384" y="12" width="28" height="18" rx="2"/>
+    <rect x="436" y="12" width="28" height="18" rx="2"/><rect x="540" y="12" width="28" height="18" rx="2"/>
+    <rect x="592" y="12" width="28" height="18" rx="2"/><rect x="644" y="12" width="28" height="18" rx="2"/>
+    <rect x="748" y="12" width="28" height="18" rx="2"/>
+    <rect x="20" y="570" width="28" height="18" rx="2"/><rect x="72" y="570" width="28" height="18" rx="2"/>
+    <rect x="124" y="570" width="28" height="18" rx="2"/><rect x="228" y="570" width="28" height="18" rx="2"/>
+    <rect x="332" y="570" width="28" height="18" rx="2"/><rect x="436" y="570" width="28" height="18" rx="2"/>
+    <rect x="540" y="570" width="28" height="18" rx="2"/><rect x="644" y="570" width="28" height="18" rx="2"/>
+    <rect x="748" y="570" width="28" height="18" rx="2"/>
+  </g>
+  <!-- Frame: national TV broadcast -->
+  <rect x="0" y="42" width="800" height="516" fill="#111010"/>
+  <!-- TV screen / broadcast frame inside frame -->
+  <rect x="80" y="80" width="640" height="400" rx="6" fill="#0A0908" stroke="#2E2A25" stroke-width="2"/>
+  <!-- TV broadcast content — news studio look -->
+  <rect x="80" y="80" width="640" height="400" fill="#111820"/>
+  <!-- Studio backdrop gradient -->
+  <ellipse cx="400" cy="200" rx="300" ry="180" fill="#1A2840" fill-opacity="0.8"/>
+  <!-- Anchor desk -->
+  <rect x="180" y="340" width="440" height="80" rx="4" fill="#1A1814"/>
+  <rect x="180" y="340" width="440" height="6" rx="3" fill="#C8102E" opacity="0.7"/>
+  <!-- Person on screen -->
+  <ellipse cx="400" cy="290" rx="42" ry="50" fill="#2A1E14"/>
+  <rect x="360" y="338" width="80" height="20" fill="#2A1E14"/>
+  <!-- Broadcast lower-third graphic -->
+  <rect x="100" y="400" width="360" height="54" fill="#C8102E" opacity="0.9"/>
+  <rect x="100" y="400" width="360" height="22" fill="#161513" opacity="0.9"/>
+  <text x="112" y="416" font-family="monospace" font-size="11" fill="#FBFAF6">नेपाल राष्ट्र बैंक</text>
+  <text x="112" y="440" font-family="Georgia,serif" font-size="14" font-weight="bold" fill="#FBFAF6">NATIONAL TELEVISION FEATURE</text>
+  <!-- Channel logo -->
+  <rect x="570" y="90" width="110" height="38" rx="3" fill="#C8102E" opacity="0.9"/>
+  <text x="625" y="114" font-family="Georgia,serif" font-size="14" font-weight="bold" fill="#FBFAF6" text-anchor="middle">NTV</text>
+  <!-- Live bug -->
+  <circle cx="110" cy="104" r="10" fill="#C8102E" opacity="0.9"/>
+  <text x="110" y="108" font-family="monospace" font-size="9" font-weight="bold" fill="#FBFAF6" text-anchor="middle">●</text>
+  <text x="130" y="108" font-family="monospace" font-size="11" fill="#C8102E">LIVE</text>
+  <!-- Scanlines -->
+  <rect x="80" y="80" width="640" height="400" fill="url(#scanlines)" opacity="0.08"/>
+  <defs>
+    <pattern id="scanlines" width="1" height="4" patternUnits="userSpaceOnUse">
+      <rect width="1" height="2" fill="#000"/>
+    </pattern>
+  </defs>
+  <!-- Screen reflection glow -->
+  <ellipse cx="400" cy="500" rx="200" ry="30" fill="#1A2840" fill-opacity="0.4"/>
+  <!-- Metadata -->
+  <text x="30" y="68" font-family="monospace" font-size="11" fill="#8B867B">FRAME 003</text>
+  <text x="580" y="68" font-family="monospace" font-size="11" fill="#C8102E">SHUBHAM JHA FILMS</text>
+  <text x="30" y="540" font-family="monospace" font-size="11" fill="#8B867B">NATIONAL TV FEATURE · THE WORK THAT LEFT THE UPLOAD PAGE</text>
+  <text x="660" y="540" font-family="monospace" font-size="11" fill="#5A5550">broadcast</text>
+</svg>
