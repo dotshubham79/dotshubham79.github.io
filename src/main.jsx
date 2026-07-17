@@ -456,6 +456,51 @@ function About() {
   );
 }
 
+function Brothers() {
+  const moments = [
+    {
+      number: '01',
+      time: 'Then',
+      caption: 'The two of us at the family laptop.',
+      image: '/img/brothers/shubham-binayak-childhood.png',
+      alt: 'Shubham and his brother Binayak together as children beside a laptop',
+    },
+    {
+      number: '02',
+      time: 'Years later',
+      caption: 'Growing into ourselves, still side by side.',
+      image: '/img/brothers/shubham-binayak-growing-up.png',
+      alt: 'Shubham and Binayak standing together in matching black traditional clothing',
+    },
+    {
+      number: '03',
+      time: 'Now',
+      caption: 'Different paths. The same foundation.',
+      image: '/img/brothers/shubham-binayak-today.png',
+      alt: 'Shubham and Binayak sitting together outdoors in suits',
+    },
+  ];
+
+  return (
+    <section className="brothers" aria-labelledby="brothers-title">
+      <header data-reveal>
+        <p className="micro-label">Brothers / since the beginning</p>
+        <h2 id="brothers-title">Built side<br /><em>by side.</em></h2>
+        <p>Before the projects, the products and the public work, there was the two of us—curious, competitive and always moving forward together.</p>
+      </header>
+      <div className="brothers__timeline">
+        {moments.map((moment) => (
+          <figure key={moment.number} data-reveal>
+            <div><img src={moment.image} alt={moment.alt} /></div>
+            <figcaption><span>{moment.number} / {moment.time}</span><p>{moment.caption}</p></figcaption>
+          </figure>
+        ))}
+      </div>
+      <p className="brothers__note" data-reveal>Shubham + Binayak / a shared history still being written.</p>
+    </section>
+  );
+}
+
 function Footer() {
   return (
     <footer id="connect">
@@ -524,7 +569,7 @@ function App() {
       </header>
       <aside className="side-note" aria-hidden="true"><span>Observe</span><i /><span>Build</span><i /><span>Tell</span></aside>
       <div className="scroll-meter" aria-hidden="true"><i /></div>
-      <main><Hero /><ProfileBridge /><SelectedWork /><SmallerBuilds /><Stealth /><UserSignals /><Impact /><Films /><About /></main>
+      <main><Hero /><ProfileBridge /><SelectedWork /><SmallerBuilds /><Stealth /><UserSignals /><Impact /><Films /><About /><Brothers /></main>
       <Footer />
       <div className="status-bar" aria-hidden="true"><span>{time} KTM</span><span>Building revolutionary ideas — here.</span><span>Scroll to see the work</span></div>
       <div className="cursor" aria-hidden="true" />
