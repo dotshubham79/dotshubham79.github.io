@@ -371,6 +371,24 @@ function Stealth() {
   );
 }
 
+function UserSignals() {
+  return (
+    <section className="user-signals" aria-labelledby="user-signals-title">
+      <header data-reveal>
+        <p className="micro-label">Users / early signals</p>
+        <h2 id="user-signals-title">When the idea<br /><em>lands.</em></h2>
+        <p>The smallest reactions are often the clearest proof that something has moved from concept into feeling.</p>
+      </header>
+      <figure data-reveal>
+        <div className="user-signals__image">
+          <img src="/img/users/wait-thats-so-nice.png" alt="Message reaction reading: Wait that’s so niceeeee, sent at 12:44 PM" />
+        </div>
+        <figcaption><span>01 / unprompted reaction</span><span>Early user response</span></figcaption>
+      </figure>
+    </section>
+  );
+}
+
 function Impact() {
   return (
     <section className="impact" id="impact" aria-labelledby="impact-title">
@@ -506,7 +524,7 @@ function App() {
       </header>
       <aside className="side-note" aria-hidden="true"><span>Observe</span><i /><span>Build</span><i /><span>Tell</span></aside>
       <div className="scroll-meter" aria-hidden="true"><i /></div>
-      <main><Hero /><ProfileBridge /><SelectedWork /><SmallerBuilds /><Stealth /><Impact /><Films /><About /></main>
+      <main><Hero /><ProfileBridge /><SelectedWork /><SmallerBuilds /><Stealth /><UserSignals /><Impact /><Films /><About /></main>
       <Footer />
       <div className="status-bar" aria-hidden="true"><span>{time} KTM</span><span>Building revolutionary ideas — here.</span><span>Scroll to see the work</span></div>
       <div className="cursor" aria-hidden="true" />

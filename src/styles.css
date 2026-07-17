@@ -292,6 +292,17 @@ footer h2 em { font-family: var(--serif); font-weight: 400; }
 .stealth__copy > p:not(.micro-label) { color: #c4c0b7; font-family: var(--serif); font-size: clamp(20px,2vw,30px); line-height: 1.4; max-width: 520px; }
 .stealth a { border-bottom: 1px solid var(--inverse); display: inline-flex; font-family: var(--mono); font-size: 9px; gap: 70px; margin-top: 45px; padding-bottom: 8px; text-transform: uppercase; }
 
+.user-signals { background: #17191a; border-top: 1px solid rgba(255,255,255,.18); color: var(--inverse); display: grid; gap: clamp(60px,9vw,150px); grid-template-columns: minmax(260px,.72fr) minmax(0,1.28fr); padding: 125px 8vw 135px; }
+.user-signals header { align-self: center; }
+.user-signals .micro-label { color: #92928e; }
+.user-signals h2 { font-size: clamp(54px,6.8vw,106px); font-weight: 500; letter-spacing: -.07em; line-height: .86; margin: 34px 0; }
+.user-signals h2 em { font-family: var(--serif); font-weight: 400; }
+.user-signals header > p:last-child { color: #bbb9b2; font-family: var(--serif); font-size: clamp(17px,1.35vw,21px); line-height: 1.5; max-width: 440px; }
+.user-signals figure { align-self: center; margin: 0; min-width: 0; }
+.user-signals__image { background: #222425; border: 1px solid rgba(255,255,255,.16); box-shadow: 0 32px 70px rgba(0,0,0,.28); padding: clamp(18px,2.8vw,42px); }
+.user-signals__image img { display: block; height: auto; width: 100%; }
+.user-signals figcaption { color: #8f8e89; display: flex; font-family: var(--mono); font-size: 7px; justify-content: space-between; letter-spacing: .08em; padding-top: 13px; text-transform: uppercase; }
+
 .impact { border-top: 1px solid var(--rule); padding: 130px 5.6vw; }
 .impact__head { display: grid; gap: 4vw; grid-template-columns: 18% 1fr 28%; }
 .impact__head h2 { font-size: clamp(44px,5.2vw,84px); }
@@ -413,6 +424,9 @@ footer h2 { font-size: clamp(58px,8vw,130px); margin: 7vh 0; }
   .stealth { min-height: 80vh; padding: 110px 20px; }
   .stealth__copy { max-width: 100%; }
   .stealth__object { height: 90vw; opacity: .58; right: -45vw; top: 45%; width: 90vw; }
+  .user-signals { display: block; padding: 100px 20px; }
+  .user-signals header { margin-bottom: 65px; }
+  .user-signals header > p:last-child { max-width: 520px; }
   .impact { padding: 100px 20px; }
   .impact__head { display: block; }
   .impact__head h2 { margin: 35px 0; }
@@ -471,6 +485,10 @@ footer h2 { font-size: clamp(58px,8vw,130px); margin: 7vh 0; }
   .project-case__details--single img { aspect-ratio: 1.4/1; }
   .build-grid { grid-template-columns: 1fr; }
   .build-cell { aspect-ratio: 1.2 / 1; }
+  .user-signals { padding-bottom: 80px; padding-top: 80px; }
+  .user-signals h2 { font-size: clamp(46px,15vw,70px); }
+  .user-signals__image { margin-left: -8px; margin-right: -8px; padding: 12px; }
+  .user-signals figcaption { display: grid; gap: 6px; }
   .impact-grid { grid-template-columns: 1fr; }
   .impact-grid article,
   .impact-grid article:nth-child(odd) { border-left: 1px solid var(--rule); min-height: 210px; }
