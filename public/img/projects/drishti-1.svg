@@ -30,5 +30,5 @@
   <text x="400" y="500" font-family="monospace" font-size="10" fill="#5A5550" text-anchor="middle">TAP TO SCAN</text>
   <!-- Caption bar -->
   <rect x="0" y="560" width="800" height="40" fill="#161311"/>
-  <text x="30" y="585" font-family="monospace" font-size="12" fill="#8B867B">PHOTO — Drishti · computer vision for visually impaired users · kathmandu</text>
+  <text x="30" y="585" font-family="monospace" font-size="12" fill="#8B867B">PHOTO / Drishti · computer vision for visually impaired users · kathmandu</text>
 </svg>

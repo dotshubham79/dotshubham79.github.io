@@ -65,10 +65,10 @@
   <text x="596" y="476" font-family="monospace" font-size="9" fill="#8B867B">prototype table · 2024</text>
   <!-- Title -->
   <rect x="0" y="0" width="800" height="52" fill="#161513"/>
-  <text x="30" y="24" font-family="Georgia,serif" font-size="17" font-weight="bold" fill="#FBFAF6">Resha — Prototype</text>
+  <text x="30" y="24" font-family="Georgia,serif" font-size="17" font-weight="bold" fill="#FBFAF6">Resha / Prototype</text>
   <text x="210" y="24" font-family="monospace" font-size="10" fill="#E89B2C">production prototype · material testing · construction review</text>
   <text x="30" y="43" font-family="monospace" font-size="10" fill="#8B867B">HIMAL collection · run 1</text>
   <!-- Caption -->
   <rect x="0" y="560" width="800" height="40" fill="#161513"/>
-  <text x="30" y="585" font-family="monospace" font-size="12" fill="#8B867B">PHOTO — prototype bag / material test · prototype table</text>
+  <text x="30" y="585" font-family="monospace" font-size="12" fill="#8B867B">PHOTO / prototype bag / material test · prototype table</text>
 </svg>

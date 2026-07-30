@@ -41,7 +41,7 @@
   <rect x="644" y="570" width="28" height="18" rx="2" fill="none" stroke="#2E2A25" stroke-width="1.5"/>
   <rect x="696" y="570" width="28" height="18" rx="2" fill="none" stroke="#2E2A25" stroke-width="1.5"/>
   <rect x="748" y="570" width="28" height="18" rx="2" fill="none" stroke="#2E2A25" stroke-width="1.5"/>
-  <!-- Main frame content: director's fav shot — street scene, warm light -->
+  <!-- Main frame content: director's favorite shot, street scene, warm light -->
   <rect x="0" y="42" width="800" height="516" fill="#1A1410"/>
   <!-- Background city silhouette -->
   <rect x="0" y="380" width="800" height="178" fill="#0D0B09"/>

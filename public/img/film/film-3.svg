@@ -18,7 +18,7 @@
   <rect x="0" y="42" width="800" height="516" fill="#111010"/>
   <!-- TV screen / broadcast frame inside frame -->
   <rect x="80" y="80" width="640" height="400" rx="6" fill="#0A0908" stroke="#2E2A25" stroke-width="2"/>
-  <!-- TV broadcast content — news studio look -->
+  <!-- TV broadcast content, news studio look -->
   <rect x="80" y="80" width="640" height="400" fill="#111820"/>
   <!-- Studio backdrop gradient -->
   <ellipse cx="400" cy="200" rx="300" ry="180" fill="#1A2840" fill-opacity="0.8"/>

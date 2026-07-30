@@ -115,13 +115,13 @@ const smallerBuilds = [
     name: 'One Day',
     domain: 'Attention',
     status: 'Concept',
-    copy: 'One person, one stage and twenty-four hours of undivided attention—then it resets.',
+    copy: 'One person, one stage and twenty-four hours of undivided attention. Then it resets.',
     image: '/img/one-day.png',
     logoClass: 'build-logo--one-day',
   },
   {
     name: 'There Is No Box',
-    domain: 'Human–AI thinking',
+    domain: 'Human and AI thinking',
     status: 'Active experiment',
     copy: 'A thinking system that questions the frame before trying to answer inside it.',
     image: '/img/there-is-no-box/thereisnobox-wide.png',
@@ -190,16 +190,6 @@ function Arrow() {
   return <span aria-hidden="true">↗</span>;
 }
 
-function IntroGate({ gone }) {
-  return (
-    <div className={`intro-gate${gone ? ' intro-gate--gone' : ''}`} aria-hidden="true">
-      <div className="intro-gate__mark"><span>SJ</span><i>©26</i></div>
-      <div className="intro-gate__line"><i /></div>
-      <p>Ideas begin here</p>
-    </div>
-  );
-}
-
 function Hero() {
   const [active, setActive] = useState(0);
   const heroRef = useRef(null);
@@ -207,7 +197,7 @@ function Hero() {
   return (
     <section className="hero" ref={heroRef} aria-labelledby="hero-title">
       <div className="hero__micro" data-reveal>
-        <span>Building revolutionary ideas — here</span>
+        <span>Building revolutionary ideas, here</span>
         <span>Institutions · communities · technology · art</span>
       </div>
 
@@ -253,7 +243,7 @@ function Hero() {
       </div>
 
       <div className="hero__bottom" data-reveal>
-        <p>I pay attention to people caught in patterns and systems—then build the alternative, frame the story and bring others into it.</p>
+        <p>I pay attention to people caught in patterns and systems. Then I build the alternative, frame the story and bring others into it.</p>
         <a href="#work">Dreams made real <span>↓</span></a>
       </div>
     </section>
@@ -263,7 +253,7 @@ function Hero() {
 function ProfileBridge() {
   const ranges = [
     ['Institutions', 'Understand how decisions, incentives and implementation actually work.'],
-    ['Communities', 'Build with the people who live inside the problem—not around them.'],
+    ['Communities', 'Build with the people who live inside the problem, not around them.'],
     ['Technology', 'Turn an observation into something precise, useful and testable.'],
     ['Art', 'Give the work a form people can feel, remember and carry forward.'],
   ];
@@ -277,7 +267,7 @@ function ProfileBridge() {
         <p className="micro-label">One method / many rooms</p>
         <h2 id="profile-title">I move between institutions, communities, technology and art.</h2>
         <p>The rooms change. The instinct does not: understand the people, question the pattern, assemble the right team and make the alternative tangible.</p>
-        <p>That movement is not scattered range. It is how I see the whole system—and find where a new idea can enter.</p>
+        <p>That movement is not scattered range. It is how I see the whole system and find where a new idea can enter.</p>
       </div>
       <div className="profile-bridge__range" data-reveal>
         {ranges.map(([title, copy]) => <span key={title}><b>{title}</b><i>{copy}</i></span>)}
@@ -291,7 +281,7 @@ function SelectedWork() {
     <section className="work" id="work" aria-labelledby="work-title">
       <header className="work-heading" data-reveal>
         <p>Selected work</p>
-        <h2 id="work-title">Three ways of entering the world.</h2>
+        <h2 id="work-title">Three ways of entering<br /><em>the world.</em></h2>
       </header>
       <div className="project-ledger">
         {flagship.map((project) => (
@@ -299,7 +289,7 @@ function SelectedWork() {
             <aside className="project-case__rail" aria-hidden="true">
               <span>{project.index}</span><i />
             </aside>
-            <div className="project-case__visuals">
+            <div className={`project-case__visuals project-case__visuals--${project.details.length + 1}`}>
               <figure className="project-case__main">
                 <img src={project.mainImage} alt={project.mainAlt} />
                 <figcaption><b>Fig. 1</b> {project.domain} / Kathmandu</figcaption>
@@ -335,7 +325,7 @@ function SmallerBuilds() {
       <div className="experiments__intro" data-reveal>
         <p className="micro-label">Other entries / the wider ledger</p>
         <h2 id="experiments-title">Smaller builds.<br /><em>Different systems.</em></h2>
-        <p>Products, platforms and fellowships that each tested one idea against one community—farmers, artists, accessibility, attention and intelligence itself.</p>
+        <p>Products, platforms and fellowships that each tested one idea against one community: farmers, artists, accessibility, attention and intelligence itself.</p>
       </div>
       <div className="build-grid">
         {smallerBuilds.map((project) => (
@@ -456,51 +446,6 @@ function About() {
   );
 }
 
-function Brothers() {
-  const moments = [
-    {
-      number: '01',
-      time: 'Then',
-      caption: 'The two of us at the family laptop.',
-      image: '/img/brothers/shubham-binayak-childhood.png',
-      alt: 'Shubham and his brother Binayak together as children beside a laptop',
-    },
-    {
-      number: '02',
-      time: 'Years later',
-      caption: 'Growing into ourselves, still side by side.',
-      image: '/img/brothers/shubham-binayak-growing-up.png',
-      alt: 'Shubham and Binayak standing together in matching black traditional clothing',
-    },
-    {
-      number: '03',
-      time: 'Now',
-      caption: 'Different paths. The same foundation.',
-      image: '/img/brothers/shubham-binayak-today.png',
-      alt: 'Shubham and Binayak sitting together outdoors in suits',
-    },
-  ];
-
-  return (
-    <section className="brothers" aria-labelledby="brothers-title">
-      <header data-reveal>
-        <p className="micro-label">Brothers / since the beginning</p>
-        <h2 id="brothers-title">Built side<br /><em>by side.</em></h2>
-        <p>Before the projects, the products and the public work, there was the two of us—curious, competitive and always moving forward together.</p>
-      </header>
-      <div className="brothers__timeline">
-        {moments.map((moment) => (
-          <figure key={moment.number} data-reveal>
-            <div><img src={moment.image} alt={moment.alt} /></div>
-            <figcaption><span>{moment.number} / {moment.time}</span><p>{moment.caption}</p></figcaption>
-          </figure>
-        ))}
-      </div>
-      <p className="brothers__note" data-reveal>Shubham + Binayak / a shared history still being written.</p>
-    </section>
-  );
-}
-
 function Footer() {
   return (
     <footer id="connect">
@@ -514,13 +459,10 @@ function Footer() {
 }
 
 function App() {
-  const [gateGone, setGateGone] = useState(false);
   const [time, setTime] = useState('');
 
   useEffect(() => {
     const root = document.documentElement;
-    const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    const timer = window.setTimeout(() => setGateGone(true), reduced ? 80 : 1350);
     const updateTime = () => setTime(new Intl.DateTimeFormat('en-GB', { timeZone: 'Asia/Kathmandu', hour: '2-digit', minute: '2-digit', hour12: false }).format(new Date()));
     updateTime();
     const clock = window.setInterval(updateTime, 30000);
@@ -540,7 +482,7 @@ function App() {
       const max = document.documentElement.scrollHeight - window.innerHeight;
       const progress = max > 0 ? window.scrollY / max : 0;
       root.style.setProperty('--scroll-progress', progress);
-      root.style.setProperty('--scroll-turn', `${progress * 120}deg`);
+      root.style.setProperty('--scroll-turn', `${progress * 36}deg`);
       root.style.setProperty('--hero-y', `${Math.min(window.scrollY * 0.1, 70)}px`);
       root.style.setProperty('--hero-opacity', Math.max(0.2, 1 - window.scrollY / window.innerHeight));
     };
@@ -554,14 +496,13 @@ function App() {
     scroll();
 
     return () => {
-      window.clearTimeout(timer); window.clearInterval(clock); reveal.disconnect();
+      window.clearInterval(clock); reveal.disconnect();
       window.removeEventListener('pointermove', pointer); window.removeEventListener('scroll', scroll);
     };
   }, []);
 
   return (
     <div className="portfolio" id="top">
-      <IntroGate gone={gateGone} />
       <header className="nav">
         <a className="wordmark" href="#top" aria-label="Shubham Jha, back to top"><span>SJ</span><i>©26</i></a>
         <nav aria-label="Primary navigation"><a href="#work">Work</a><a href="#films">Films</a><a href="#impact">Impact</a><a href="#connect">Connect</a></nav>
@@ -569,10 +510,9 @@ function App() {
       </header>
       <aside className="side-note" aria-hidden="true"><span>Observe</span><i /><span>Build</span><i /><span>Tell</span></aside>
       <div className="scroll-meter" aria-hidden="true"><i /></div>
-      <main><Hero /><ProfileBridge /><SelectedWork /><SmallerBuilds /><Stealth /><UserSignals /><Impact /><Films /><About /><Brothers /></main>
+      <main><Hero /><ProfileBridge /><SelectedWork /><SmallerBuilds /><Stealth /><UserSignals /><Impact /><Films /><About /></main>
       <Footer />
-      <div className="status-bar" aria-hidden="true"><span>{time} KTM</span><span>Building revolutionary ideas — here.</span><span>Scroll to see the work</span></div>
-      <div className="cursor" aria-hidden="true" />
+      <div className="status-bar" aria-hidden="true"><span>{time} KTM</span><span>Building revolutionary ideas, here.</span><span>Scroll to see the work</span></div>
     </div>
   );
 }
